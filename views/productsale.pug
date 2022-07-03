@@ -1,0 +1,29 @@
+extend loginlayout 
+block content 
+    body.dash 
+        .container-login 
+            .container 
+                h1 Products Record
+                form(action='/products' method='POST')
+                    h4.sign-in Add Product
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='text' name='name' aria-describedby='userName' placeholder='Product name' required='')
+                    br    
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='number' name='price' aria-describedby='emailHelp' placeholder='Price' required='')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='number' name='quantity' placeholder='Quantity' required='')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='text' name='status' placeholder='Status')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='text' name='type' placeholder='Type')
+                    br
+                    button.btn.btn-primary(type='submit') Add Product

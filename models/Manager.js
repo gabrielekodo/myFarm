@@ -12,10 +12,10 @@ const ManagerSchema = new mongoose.Schema({
     required: true,
   },
 
-  password: {
-    type: String,
+  // password: {
+  //   type: String,
     
-  },
+  // },
 });
 
 // Export Model

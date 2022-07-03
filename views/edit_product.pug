@@ -1,0 +1,21 @@
+extend loginlayout 
+block content 
+    body.dash 
+        .container-login 
+            .container 
+                h1 #{title}
+                form(action='/products/edit/'+product._id method='POST')
+                    h4.sign-in Add Product
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='text' name='name' aria-describedby='userName' placeholder='Product name' value=product.name required='')
+                    br    
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='number' name='price' aria-describedby='emailHelp' placeholder='Price' value=product.price required='')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='number' name='quantity' placeholder='Quantity' value=product.quantity required='')
+                    br
+                    button.btn.btn-primary(type='submit') Edit Product

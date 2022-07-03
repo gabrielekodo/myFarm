@@ -11,7 +11,7 @@ html
         title=title 
     body
         nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-            a.navbar-brand(href='#') ZaWash
+            a.navbar-brand(href='#') FarmApp
             button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
@@ -19,25 +19,25 @@ html
                     //- li.nav-item
                     //-     a.nav-link(href='./', class=routeName=='home'?'active': '') Home
                     li.nav-item
-                        a.nav-link(href='./cartracking',  class=routeName=='cartracking'?'active': '') Car-Registration
+                        a.nav-link(href='/productlist',  class=routeName=='cartracking'?'active': '') Add Farm Stock
                     li.nav-item
-                        a.nav-link(href='./inventory',  class=routeName=='inventory'?'active': '') Inventory
+                        a.nav-link(href='/productlist/list',  class=routeName=='inventory'?'active': '') Farm Inventory
                     li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Dashboard
                         .dropdown-menu
-                            a.dropdown-item(href='/dashboard') Washer Payout
+                            a.dropdown-item(href='/dashboard') My Account
                             a.dropdown-item(href='/costs') Cost Monitor
                     li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Register
                         .dropdown-menu
-                            a.dropdown-item(href='/register') Washer Registration
-                            a.dropdown-item(href='/register_manager') Register Manager
+                            //- a.dropdown-item(href='/register') Washer Registration
+                            a.dropdown-item(href='/register') Register Farm Staff
                     li.nav-item.dropdown
                         a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') Collections
                         .dropdown-menu
-                            a.dropdown-item(href='/collections') Washer details
-                            a.dropdown-item(href='/cars') Car details
-                a(href='./logout')  Logout
+                            a.dropdown-item(href='#') Washer details
+                            a.dropdown-item(href='/managers') Manager details
+                a(href='/logout')  Logout
 
 
     block content

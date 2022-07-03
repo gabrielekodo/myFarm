@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 // const Manager = require("../models/Manager");
 
 //restricted /dashboard
-router.get("/dashboard", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+router.get("/dashboard", (req, res) => {
   res.render("farm_dashboard", {
     title: "Farm Manager Dashboard",
   });
@@ -25,6 +25,5 @@ router.get("/logout", (req, res, next) => {
     res.redirect("/login");
   });
 });
-
 
 module.exports = router;

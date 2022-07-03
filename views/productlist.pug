@@ -1,0 +1,31 @@
+extends dash_layout 
+block content 
+    body.collections
+         h2.reg All Products
+         table.table.table-washers 
+            thead
+                tr
+                    th Name 
+                    th Price
+                    th Quantity
+                    th Status
+                    th Type
+            tbody
+                if products.length
+                    each product in products
+                        tr
+                            td #{product.name}
+                            td #{product.price} 
+                            td #{product.quantity} 
+                            td #{product.status} 
+                            td #{product.type} 
+                            td 
+                                form.delete(method='post' action='/product/delete')
+                                    input(type="hidden", placeholder="", name="id", value=product._id)
+                                    button.button2(type="submit") Delete       
+                    
+                            td 
+                                a.button2.btn-secondary(href='/products/edit/'+product._id) Edit       
+                                
+                                    
+                    
